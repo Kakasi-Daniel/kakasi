@@ -1,0 +1,304 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.text-black{
+  color: #000;
+}
+
+
+body{
+  font-family: 'Dosis', sans-serif;
+  background-color: #f4f4f4;
+  line-height: 1.5;
+}
+
+ul{
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+img {
+  width: 100%;
+}
+
+%btn-shared{
+  display: inline-block;
+  padding: 0.7rem 2rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.5s;
+}
+
+.btn{
+  
+  &-light{
+    @extend %btn-shared;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+
+  &-dark{
+    @extend %btn-shared;
+    background-color: #333;
+    color: #fff;
+  }
+
+}
+
+button[class^='btn-']:hover,
+a[class^='btn-']:hover,
+input[class^='btn-']:hover {
+  background-color: rgb(189, 123, 75);
+  color: #fff;
+}
+
+.container {
+  max-width: 1280px;
+  margin: auto;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+
+.logo {
+  width: 250px;
+}
+
+header {
+  background: url(../img/showcase.jpg) no-repeat center right/cover;
+  height: 100vh;
+}
+
+#main-nav{
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  ul{
+    display: flex;
+
+    li {
+      padding: 0.5rem 1rem;
+      margin-right: 0.3rem;
+
+      a{
+        text-transform: uppercase;
+        color: #f4f4f4;
+        padding-bottom: .5rem;
+        border-bottom: 3px solid transparent;
+        transition: border-color 0.5s;
+
+        &:hover{
+          border-color: #fff;
+        }
+
+        &.current {
+          border-color:rgb(189, 123, 75);
+        }
+
+      }
+    }
+
+  }
+}
+
+.showcase{
+  height: 100%;
+  margin-top: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  text-align: center;
+  color: #f4f4f4;
+
+  h1 {
+    font-size: 4rem;
+    color: #f4f4f4;
+
+  }
+
+  p{
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    color: #f4f4f4;
+  }
+ 
+}
+
+.txt-type{
+  color: rgb(240, 162, 106);
+  -webkit-text-stroke: 0.1px black;
+}
+
+
+.inner {
+  background: url(../img/showcase.jpg) no-repeat top right/cover;
+  height: 5rem;
+  border-bottom: rgb(240, 162, 106) 3px solid;
+}
+
+
+#items{
+  
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 1rem;
+  text-align: center;
+}
+
+.item{
+  position: relative;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15%;
+  color: #f4f4f4;
+  background: rgba(00, 00, 00, 0.5);
+  transform: translateY(-150%);
+  transition: opacity, transform 1s ease-out;
+}
+
+#launch {
+  position: absolute;
+  z-index: 3;
+  bottom: 5%;
+  transform: translateY(200%);
+  transition: background 0.5s ease-in-out, color 0.5s ease-in-out, transform 1s ease-out;
+}
+
+
+#launch:hover{
+  background: #333;
+}
+
+.item:hover .title {
+  transform: none;
+}
+
+.item:hover #launch {
+  transform: none;
+}
+
+.my {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 1rem;
+  textarea{
+    grid-column: 1/span 2;
+    height: 5rem;
+    border: none ;
+    padding: .5rem;
+    background-color: #333;
+    color: #f6f6f6;
+  }
+
+  input{
+    height: 1.5rem;
+    border: none ;
+    padding: .5rem;
+    background-color: #333;
+    color: #f6f6f6;
+
+  }
+
+}
+
+::placeholder{
+  color: #f6f6f6;
+}
+
+#context {
+  text-align: center;
+  margin-top: 1.5rem;
+  padding-bottom: 2rem;
+  color: #f6f6f6;
+
+
+}
+
+
+#submit {
+  grid-column: 1/span 2;
+  margin: 1rem auto;
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
+label {
+  display: none;
+}
+
+textarea:focus, input:focus {
+  outline-color: rgb(189, 123, 75);
+  border-color: rgb(189, 123, 75);
+}
+
+#about {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 2rem;
+  margin: 2rem;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #f4f4f4;
+
+  &-img {
+    width: 100%;
+    height: 100%;
+  }
+
+  ul {
+    text-align: left;
+    font-weight: bold;
+  }
+  li{
+    font-weight: normal;
+  }
+
+  &-text {
+    padding-top: 2rem;
+    padding-left: 1rem;
+    border-left: 5px solid rgb(240, 162, 106);
+    background-color: rgba($color: #000, $alpha: 0.3);
+    padding-bottom: 2rem;
+  }
+
+}
+
+.bold {
+  font-weight: bolder;
+}
+
+body {
+  z-index: -1;
+  background: url(../img/showcase.jpg) no-repeat center right/cover;
+  height: 100vh;
+}

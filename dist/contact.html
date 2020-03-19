@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/f6a98b0c32.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <title>Kakasi Daniel | Contact</title>
+</head>
+<body>
+  <div class="inner">
+    <div class="container">
+      <nav id="main-nav">
+        <div class="logo"><a href="index.html"><img src="img/logo.png" alt="Home"></a></div>
+        <ul>
+          <li><a  href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a  href="work.html">Work</a></li>
+          <li><a  class="current" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+    <div class="container">
+      <h3 id="context">CONTACT ME</h3>
+      <form name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true">
+        <label for="Name"></label>
+        <input type="text" name="Name" id="name" placeholder="Name">
+        <label for="E-mail"></label>
+        <input type="email" name="E-mail" placeholder="E-mail">
+        <label for="Subject"></label>
+        <input type="text" name="Subject" id="subject" placeholder="Subject">
+        <label for="Phone"></label>
+        <input type="tel" name="Phone" id="tel" placeholder="Phone number (optional)">
+        <label for="Message"></label>
+        <textarea name="Message" id="" placeholder="Message"></textarea>
+        <div data-netlify-recaptcha="true" ></div>
+        <button id="submit" class="btn-dark" type="submit">Submit</button>
+      </form>
+    </div>
+</body>
+</html>
