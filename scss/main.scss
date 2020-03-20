@@ -415,10 +415,6 @@ form {
   padding: 0.7rem 7rem;
 }
 
- div [data-netlify-recaptcha="true"]{
-   padding: 1rem;
-   margin: auto;
- }
 
 html {
   background: #000;
@@ -435,6 +431,10 @@ html {
  ::placeholder {
    font-size: 1.1rem;
    font-family: 'Dosis';
+ }
+
+ textarea {
+   padding-bottom: 1rem;
  }
 
 }

@@ -283,9 +283,6 @@ body {
   #submit {
     text-align: center;
     padding: 0.7rem 7rem; }
-  div [data-netlify-recaptcha="true"] {
-    padding: 1rem;
-    margin: auto; }
   html {
     background: #000; }
   body {
@@ -294,4 +291,6 @@ body {
     background: url(../img/showcase.jpg) no-repeat center center/cover; }
   ::placeholder {
     font-size: 1.1rem;
-    font-family: 'Dosis'; } }
+    font-family: 'Dosis'; }
+  textarea {
+    padding-bottom: 1rem; } }
