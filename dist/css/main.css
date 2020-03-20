@@ -183,7 +183,7 @@ form {
 #submit {
   grid-column: 1/span 2;
   margin: 1rem auto;
-  padding-left: 6rem;
+  padding-left: 7rem;
   padding-right: 6rem; }
 
 label {
@@ -223,3 +223,60 @@ body {
   z-index: -1;
   background: url(../img/showcase.jpg) no-repeat center right/cover;
   height: 100vh; }
+
+@media (max-width: 500px) {
+  body {
+    line-height: 1; }
+  #main-nav {
+    display: flex;
+    flex-direction: column; }
+    #main-nav ul {
+      margin-top: 1.5rem; }
+    #main-nav a {
+      font-size: 1.1rem; }
+  .container {
+    padding: 0 0.5rem; }
+  .showcase h1 {
+    font-size: 2.2rem; }
+  .showcase p {
+    margin-top: 2rem; }
+  .showcase .btn-light {
+    font-size: 1.3rem; }
+  .txt-type {
+    -webkit-text-stroke: 0; }
+  .inner {
+    height: 7rem; }
+  #items {
+    display: block;
+    margin-top: 3rem; }
+  .item {
+    margin-top: 1rem; }
+  .title {
+    transform: none; }
+  #launch {
+    transform: none; }
+  body {
+    background: #000; }
+  #about {
+    display: block; }
+    #about-img {
+      margin-bottom: 1rem; }
+    #about-text {
+      padding: 0;
+      border-left: none;
+      border-top: 5px solid #f0a26a;
+      padding-top: 1rem; }
+  #context {
+    margin-top: 2rem;
+    font-size: 1.7rem; }
+  form {
+    display: flex;
+    flex-direction: column; }
+    form input, form textarea {
+      margin-top: 1rem;
+      height: 2rem; }
+    form textarea {
+      height: 8rem; }
+    form .btn-dark {
+      width: 80%;
+      font-size: 1rem; } }
