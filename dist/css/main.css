@@ -98,11 +98,6 @@ header {
   color: #f0a26a;
   -webkit-text-stroke: 0.1px black; }
 
-.inner {
-  background: url(../img/showcase.jpg) no-repeat top right/cover;
-  height: 5rem;
-  border-bottom: #f0a26a 3px solid; }
-
 #items {
   margin-top: 2rem;
   display: grid;
@@ -184,7 +179,7 @@ form {
   grid-column: 1/span 2;
   margin: 1rem auto;
   padding-left: 7rem;
-  padding-right: 6rem; }
+  padding-right: 7rem; }
 
 label {
   display: none; }
@@ -219,8 +214,12 @@ textarea:focus, input:focus {
 .bold {
   font-weight: bolder; }
 
+html {
+  position: relative; }
+
 body {
-  z-index: -1;
+  background-attachment: fixed;
+  z-index: -10;
   background: url(../img/showcase.jpg) no-repeat center right/cover;
   height: 100vh; }
 
@@ -229,7 +228,9 @@ body {
     line-height: 1; }
   #main-nav {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    height: 5rem;
+    padding-bottom: 6rem; }
     #main-nav ul {
       margin-top: 1.5rem; }
     #main-nav a {
@@ -255,8 +256,6 @@ body {
     transform: none; }
   #launch {
     transform: none; }
-  body {
-    background: #000; }
   #about {
     display: block; }
     #about-img {
@@ -265,10 +264,11 @@ body {
       padding: 0;
       border-left: none;
       border-top: 5px solid #f0a26a;
-      padding-top: 1rem; }
+      padding: 1rem;
+      background-color: rgba(0, 0, 0, 0.7); }
   #context {
     margin-top: 2rem;
-    font-size: 1.7rem; }
+    font-size: 3rem; }
   form {
     display: flex;
     flex-direction: column; }
@@ -279,4 +279,20 @@ body {
       height: 8rem; }
     form .btn-dark {
       width: 80%;
-      font-size: 1rem; } }
+      font-size: 1rem; }
+  #submit {
+    text-align: center;
+    padding: 0.7rem 7rem; }
+  div [data-netlify-recaptcha="true"] {
+    width: 100%;
+    height: 100%;
+    margin: auto; }
+  html {
+    background: #000; }
+  body {
+    background: url(../img/showcase.jpg) no-repeat center center/cover; }
+  header {
+    background: url(../img/showcase.jpg) no-repeat center center/cover; }
+  ::placeholder {
+    font-size: 1.1rem;
+    font-family: 'Dosis'; } }

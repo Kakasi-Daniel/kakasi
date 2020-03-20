@@ -140,11 +140,6 @@ header {
 }
 
 
-.inner {
-  background: url(../img/showcase.jpg) no-repeat top right/cover;
-  height: 5rem;
-  border-bottom: rgb(240, 162, 106) 3px solid;
-}
 
 
 #items{
@@ -249,7 +244,7 @@ form{
   grid-column: 1/span 2;
   margin: 1rem auto;
   padding-left: 7rem;
-  padding-right: 6rem;
+  padding-right: 7rem;
 }
 
 label {
@@ -297,8 +292,13 @@ textarea:focus, input:focus {
   font-weight: bolder;
 }
 
+html {
+  position: relative;
+}
+
 body {
-  z-index: -1;
+  background-attachment: fixed;
+  z-index: -10;
   background: url(../img/showcase.jpg) no-repeat center right/cover;
   height: 100vh;
 }
@@ -312,6 +312,8 @@ body {
     #main-nav {
       display: flex;
       flex-direction: column;
+      height: 5rem;
+      padding-bottom: 6rem;
 
       ul {
         margin-top: 1.5rem;
@@ -367,10 +369,6 @@ body {
   transform: none;
 }
 
-body {
-  background: #000;
-}
-
 #about {
   display: block;
 
@@ -382,14 +380,15 @@ body {
     padding: 0;
     border-left: none;
     border-top: 5px solid rgb(240, 162, 106);
-    padding-top: 1rem;
+    padding: 1rem;
+    background-color: rgba(00, 00, 00, 0.7);
   }
 
 }
 
 #context {
   margin-top: 2rem;
-  font-size: 1.7rem;
+  font-size: 3rem;
 }
 
 form {
@@ -410,5 +409,33 @@ form {
   }
 
 }
+
+#submit {
+  text-align: center;
+  padding: 0.7rem 7rem;
+}
+
+ div [data-netlify-recaptcha="true"]{
+   width: 100%;
+   height: 100%;
+   margin: auto;
+ }
+
+html {
+  background: #000;
+}
+
+ body {
+  background: url(../img/showcase.jpg) no-repeat center center/cover;
+}
+
+ header {
+  background: url(../img/showcase.jpg) no-repeat center center/cover;
+}
+
+ ::placeholder {
+   font-size: 1.1rem;
+   font-family: 'Dosis';
+ }
 
 }
