@@ -171,7 +171,6 @@ header {
 
 
 
-
 #items{
   
   margin-top: 2rem;
@@ -179,16 +178,15 @@ header {
   grid-template-columns: repeat(3,1fr);
   grid-gap: 1rem;
   text-align: center;
-  align-items: center;
+}
 
-  img {
-    width: 100%;
-    height: 230px;
-  }
-
+#site {
+  height: 100%;
 }
 
 .item{
+  height: 100%;
+  width: 100%;
   position: relative;
   overflow: hidden;
 }
