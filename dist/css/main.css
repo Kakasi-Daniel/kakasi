@@ -330,6 +330,7 @@ body {
   svg{
     display: block;
     width: 370px !important;
+    padding: 0 1rem;
   }
 
   body {
